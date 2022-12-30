@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .flex{
+        display: flex;
+      }
+      .contain{
+        width: 300px;
+        height: 300px;
+        margin: 10px auto;
+        border: 5px solid rgba(209, 209, 209, 0.664);
+        background-color:rgb(209, 209, 209);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } 
+      .box{
+        width: 300px;
+        height: 300px;
+        background-color: #000;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      } 
+      .item{
+        width: 100px;
+        height: 100px;
+        background-color: #e7e7e7;
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow:
+        inset 0 5px white, 
+        inset 0 -5px #bbb,
+        inset 5px 0 #d7d7d7, 
+        inset -5px 0 #d7d7d7;
+        border-radius: 10%;
+      }
+
+      .dot {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin: 4px;
+
+        background-color: #333;
+        box-shadow: inset 0 3px #111, inset 0 -3px #555;
+      }
+
+      .item > div{
+        width: 100%;
+        display: flex;
+      }
+      /* 1 */
+      .item1 .item-row1{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+     /* 2 */
+      .item2 .item-row2{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      /*3*/
+      .item3 .item-row2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item3 .item-row3{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      /*4*/
+      .item4 .item-row1{
+        display: flex;
+        justify-content:space-between ;
+      }
+      .item4 .item-row2{
+        display: flex;
+        align-items: flex-end;
+        justify-content:space-between ;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="box flex">
+            <div class="item item1">
+                <div class="item-row1">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="item-row1">
+                    <div class="dot"></div>
+                </div>
+                <div class="item-row2">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="item-row1">
+                    <div class="dot"></div>
+                </div>
+                <div class="item-row2">
+                    <div class="dot"></div>
+                </div>
+                <div class="item-row3">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="item item4">
+                <div class="item-row1">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="item-row2">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+       </div>
+    </div>
+   
+</body>
+</html>
