@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*align-self属性定义项目在交叉轴上如何对齐 align-self: flex-start | flex-end | center | baseline  | stretch;*/
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .align-self {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+
+        .align-self .flex-start{
+            align-self:flex-start;
+        }
+
+        .align-self .flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self .center {
+            align-self: center;
+        }
+
+        
+        .align-self .baseline {
+            align-self: baseline ;
+        }
+
+        .align-self .stretch {
+            align-self: stretch;
+        }
+
+        .align-self .content {
+            margin: 5px;
+             height: 50px; 
+            /* height: 50px; /*  stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+            /* width: 35%; */
+        }
+
+        .align-self > div {
+            margin-top: 20px;
+            height: 100px;
+            background-color: #f3f3f3;
+        }
+
+        .align-self>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .align-self>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+
+        /* .align-self > div:nth-of-type(n+3) .content{
+            background-color: #00ff00;
+        } */
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="align-self">
+        <p style="font-weight: bold;">align-self属性定义项目在交叉轴上如何对齐。 align-self: flex-start | flex-end | center | baseline | stretch; </p>
+        <div class="flex">
+            <div class="content flex-start">flex-start1</div>
+            <div class="content">flex-start2</div>
+            <div class="content">flex-start3</div>
+        </div>
+        <div class="flex">
+            <div class="content  flex-end">flex-end1</div>
+            <div class="content">flex-end2</div>
+            <div class="content">flex-end3</div>
+        </div>
+        <div class="flex">
+            <div class="content  center">center1</div>
+            <div class="content">center2</div>
+            <div class="content">center3</div>
+        </div>
+        <div class="flex ">
+            <div class="content baseline ">baseline1</div>
+            <div class="content">baseline2</div>
+            <div class="content">baseline3</div>
+        </div>
+        <div class="flex ">
+            <div class="content stretch" style="height:auto;">stretch1</div>
+            <div class="content"  style="height:20px;">stretch2</div>
+            <div class="content">stretch3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

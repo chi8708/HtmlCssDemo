@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*flex-flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。*/
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .flex-grow {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+        .flex-grow .flex-grow2{
+            flex-grow: 0.5;/*剩余空间放大比例*/
+        }
+        
+        .flex-grow .content {
+            margin: 5px;
+            height: 50px;
+        }
+
+        .flex-grow>div {
+            margin-top: 20px;
+            /* background-color: #f3f3f3; */
+        }
+
+        .flex-grow>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-grow>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-grow">
+        <p style="font-weight: bold;">flex-flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+        </p>
+        <div class="flex nowrap">
+            <div class="content flex-grow1">flex-grow1</div>
+            <div class="content flex-grow2">flex-grow2</div>
+            <div class="content flex-grow3">flex-grow3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

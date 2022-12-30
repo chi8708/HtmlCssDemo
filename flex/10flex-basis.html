@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。*/
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-basis {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+        .flex-basis .flex-basis1{
+            width: 100px;
+           
+        }
+        .flex-basis .flex-basis2{
+            flex-basis: 200px;
+        }
+        .flex-basis .flex-basis3{
+            flex-basis: 30px;
+        }
+
+        .flex-basis .content {
+            margin: 5px;
+            height: 50px;
+        }
+
+        .flex-basis>div {
+            margin-top: 20px;
+            background-color: #f3f3f3;
+            width: 300px;
+        }
+
+        .flex-basis>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-basis>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-basis">
+        <p style="font-weight: bold;">flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。。
+        </p>
+        <div class="flex">
+            <div class="content flex-basis1">flex-basis1</div>
+            <div class="content flex-basis2">flex-basis2</div>
+            <div class="content flex-basis3">flex-basis3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex-direction: row | row-reverse | column | column-reverse; */
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .flex-direction {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+
+        .flex-direction .row {
+            flex-direction: row;
+        }
+
+        .flex-direction .row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .flex-direction .column {
+            flex-direction: column;
+        }
+
+        .flex-direction .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .flex-direction>div {
+            margin-top: 20px;
+            background-color: #dcdddc;
+        }
+
+        .flex-direction .content {
+            margin: 5px;
+            height: 50px;
+
+        }
+
+        .flex-direction>div:nth-of-type(odd) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-direction>div:nth-of-type(even) .content {
+            background-color: #00ff00;
+        }
+
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-direction">
+        <p style="font-weight: bold;">flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
+        <div class="flex row">
+            <div class="content"><div >row1</div></div>
+            <div class="content">row2</div>
+            <div class="content">row3</div>
+        </div>
+        <div class="flex row-reverse">
+            <div class="content">row-reverse1</div>
+            <div class="content">row-reverse2</div>
+            <div class="content">row-reverse3</div>
+        </div>
+        <div class="flex column">
+            <div class="content">column1</div>
+            <div class="content">column2</div>
+            <div class="content">column3</div>
+        </div>
+        <div class="flex column-reverse">
+            <div class="content">column-reverse1</div>
+            <div class="content">column-reverse2</div>
+            <div class="content">column-reverse3</div>
+        </div>
+    </div>
+</body>
+
+</html>

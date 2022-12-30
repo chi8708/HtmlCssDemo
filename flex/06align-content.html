@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*lign-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。 align-content: flex-start | flex-end | center | space-between | space-around | stretch;*/
+
+        .flex {
+            display: flex;
+            /* overflow-x: auto; */
+        }
+
+        .align-content{
+            border: 1px solid #1d1c1c;
+            
+        }
+
+        .align-content .flex-start{
+            align-content:flex-start;
+        }
+
+        .align-content .flex-end {
+            align-content: flex-end;
+        }
+
+        .align-content .center {
+            align-content: center;
+        }
+
+        .align-content .stretch {
+            align-content: stretch;
+        }
+        .align-content .space-around {
+            align-content:space-around;
+        }
+
+        .align-content .space-between {
+            align-content:space-between;
+        }
+
+        .align-content .content {
+            margin: 5px;
+            
+            /* height: 50px;   stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+            /* width: 35%; */
+        }
+
+        .align-content > div {
+            flex-wrap: wrap;
+            width: 500px;
+            height: 200px;     /*使用此属性时flex必须设置 wrap height weigth ，子项成多行才能看出效果*/
+            margin-top: 20px;
+            background-color: #f3f3f3;
+        }
+
+        .align-content > div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .align-content > div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+
+        .align-content > div:nth-of-type(n) .content:nth-of-type(n) {
+            width: 200px;
+            height: 50px;
+        }
+        .align-content > div:nth-of-type(n) .content:nth-of-type(2n) {
+            width: 150px;
+            height: 30px;
+        }
+
+
+        /* .align-content> div:nth-of-type(n+3) .content{
+            background-color: #00ff00;
+        } */
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="align-content">
+        <p style="font-weight: bold;">
+            align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。 align-content: flex-start | flex-end | center | space-between | space-around | stretch; 
+           <br/>
+           最明显的区别是align-content 适用于多行，align-item 则是适用于单行。
+align-content（单行无效）可以设置上对齐、下对齐、居中、拉伸、平分剩余空间；align-item上对齐、下对齐、居中、拉伸。
+/*使用此属性时flex容器必须设置 wrap height weigth ，子项成多行才能看出效果*/
+        </p>
+        <div class="flex flex-start">
+            <div class="content">flex-start1</div>
+            <div class="content">flex-start2</div>
+            <div class="content">flex-start3</div>
+        </div>
+        <div class="flex flex-end">
+            <div class="content">flex-end1</div>
+            <div class="content">flex-end2</div>
+            <div class="content">flex-end3</div>
+        </div>
+        <div class="flex center">
+            <div class="content">center1</div>
+            <div class="content">center2</div>
+            <div class="content">center3</div>
+        </div>
+        <div class="flex stretch">
+            <div class="content">stretch1</div>
+            <div class="content">stretch2</div>
+            <div class="content">stretch3</div>
+        </div>
+
+        <div class="flex space-between">
+            <div class="content">space-between1</div>
+            <div class="content">space-between2</div>
+            <div class="content">space-between3</div>
+            
+        </div>
+        <div class="flex space-around">
+            <div class="content">space-around1</div>
+            <div class="content" >space-around2</div>
+            <div class="content">space-around3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

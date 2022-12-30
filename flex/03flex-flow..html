@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*flex-flow: <flex-direction> || <flex-wrap>;*/
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .flex-flow .flow {
+            flex-flow: row wrap;
+        }
+
+
+        .flex-flow .content {
+            margin: 5px;
+            height: 50px;
+            width: 35%;
+        }
+
+        .flex-flow>div {
+            margin-top: 20px;
+            /* background-color: #dcdddc; */
+        }
+
+        .flex-flow>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-flow>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+
+        /* .flex-flow > div:nth-of-type(n+3) .content{
+            background-color: #00ff00;
+        } */
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-flow">
+        <p style="font-weight: bold;">flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 </p>
+        <div class="flex flow">
+            <div class="content">flow1</div>
+            <div class="content">flow2</div>
+            <div class="content">flow3</div>
+        </div>
+       
+    </div>
+</body>
+
+</html>

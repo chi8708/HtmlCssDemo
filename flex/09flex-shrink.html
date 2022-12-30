@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。*/
+
+        .flex {
+            display: flex;
+            /* overflow-x: auto; */
+            /* justify-content: space-around; */
+            /* flex-wrap: wrap; 必须为nowrap */ 
+        }
+
+        .flex-shrink {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+        .flex-shrink .flex-shrink1{
+            width: 200px;
+           
+        }
+        .flex-shrink .flex-shrink2{
+            width: 200px;
+            flex-shrink: 2;
+        }
+        .flex-shrink .flex-shrink3{
+            width: 200px;
+            flex-shrink: 3;
+        }
+
+        .flex-shrink .content {
+            margin: 5px;
+            height: 50px;
+        }
+
+        .flex-shrink>div {
+            margin-top: 20px;
+            background-color: #f3f3f3;
+            width: 300px;
+        }
+
+        .flex-shrink>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-shrink>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-shrink">
+        <p style="font-weight: bold;">flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。。
+        </p>
+        <div class="flex">
+            <div class="content flex-shrink1">flex-shrink1</div>
+            <div class="content flex-shrink2">flex-shrink2</div>
+            <div class="content flex-shrink3">flex-shrink3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

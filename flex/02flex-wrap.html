@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*如果一条轴线排不下，如何换行 flex-wrap: nowrap | wrap | wrap-reverse; */
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .flex-wrap {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+
+        .flex-wrap .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .flex-wrap .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-wrap .wrap {
+            flex-wrap: wrap;
+        }
+
+
+        .flex-wrap .content {
+            margin: 5px;
+            height: 50px;
+            width: 35%;
+        }
+
+        .flex-wrap>div {
+            margin-top: 20px;
+            /* background-color: #f3f3f3; */
+        }
+
+        .flex-wrap>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .flex-wrap>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+
+        /* .flex-wrap > div:nth-of-type(n+3) .content{
+            background-color: #00ff00;
+        } */
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-wrap">
+        <p style="font-weight: bold;">如果一条轴线排不下，如何换行 flex-wrap: nowrap（默认） | wrap | wrap-reverse; </p>
+        <div class="flex nowrap">
+            <div class="content">nowrap1</div>
+            <div class="content">nowrap2</div>
+            <div class="content">nowrap3</div>
+        </div>
+        <div class="flex wrap">
+            <div class="content">wrap1</div>
+            <div class="content">wrap2</div>
+            <div class="content">wrap3</div>
+        </div>
+        <div class="flex wrap-reverse">
+            <div class="content">wrap-reverse1</div>
+            <div class="content">wrap-reverse2</div>
+            <div class="content">wrap-reverse3</div>
+        </div>
+    </div>
+</body>
+
+</html>

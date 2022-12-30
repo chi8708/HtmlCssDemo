@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*align-items属性定义项目在交叉轴上如何对齐 align-items: flex-start | flex-end | center | baseline  | stretch;*/
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .align-items {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+
+        .align-items .flex-start{
+            align-items:flex-start;
+        }
+
+        .align-items .flex-end {
+            align-items: flex-end;
+        }
+
+        .align-items .center {
+            align-items: center;
+        }
+
+        
+        .align-items .baseline {
+            align-items: baseline ;
+        }
+
+        .align-items .stretch {
+            align-items: stretch;
+        }
+
+        .align-items .content {
+            margin: 5px;
+            
+            /* height: 50px; /*  stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+            /* width: 35%; */
+        }
+
+        .align-items>div {
+            margin-top: 20px;
+            height: 100px;
+            background-color: #f3f3f3;
+        }
+
+        .align-items>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .align-items>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+
+        /* .align-items > div:nth-of-type(n+3) .content{
+            background-color: #00ff00;
+        } */
+        /*  */
+    </style>
+
+</head>
+
+<body>
+    <div class="align-items">
+        <p style="font-weight: bold;">align-items属性定义项目在交叉轴上如何对齐。 align-items: flex-start | flex-end | center | baseline | stretch; </p>
+        <div class="flex flex-start">
+            <div class="content">flex-start1</div>
+            <div class="content">flex-start2</div>
+            <div class="content">flex-start3</div>
+        </div>
+        <div class="flex flex-end">
+            <div class="content">flex-end1</div>
+            <div class="content">flex-end2</div>
+            <div class="content">flex-end3</div>
+        </div>
+        <div class="flex center">
+            <div class="content">center1</div>
+            <div class="content">center2</div>
+            <div class="content">center3</div>
+        </div>
+        <div class="flex baseline ">
+            <div class="content">baseline1</div>
+            <div class="content">baseline2</div>
+            <div class="content">baseline3</div>
+        </div>
+        <div class="flex stretch">
+            <div class="content">stretch1</div>
+            <div class="content">stretch2</div>
+            <div class="content">stretch3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

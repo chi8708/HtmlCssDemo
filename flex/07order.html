@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。*/
+
+        .flex {
+            display: flex;
+
+            /* overflow-x: auto; */
+        }
+
+        .order {
+            border: 1px solid #1d1c1c;
+            overflow-x: auto;
+        }
+        .order .order1{
+            order: 1;
+        }
+        .order .order3{
+            order: -1;
+        }
+        .order .content {
+            margin: 5px;
+            height: 50px;
+        }
+
+        .order>div {
+            margin-top: 20px;
+            /* background-color: #f3f3f3; */
+        }
+
+        .order>div:nth-of-type(n) .content {
+            background-color: #ff0000;
+        }
+
+        .order>div:nth-of-type(2n) .content {
+            background-color: #00ff00;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="order">
+        <p style="font-weight: bold;">order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+        <div class="flex nowrap">
+            <div class="content order1">order1</div>
+            <div class="content order2">order2</div>
+            <div class="content order3">order3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
