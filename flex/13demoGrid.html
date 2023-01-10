@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 1.1em;
+        }
+
+        /* 平均分配 */
+        .GridPJ .Grid {
+            margin: 5px;
+            display: flex;
+
+        }
+
+        .GridPJ .Grid-cell {
+            flex: 1;
+            margin-left: 5px;
+            background-color: red;
+        }
+
+        /* 一部分固定宽度 其余自动平均分配 */
+        .GridPJ2 .Grid {
+            display: flex;
+            margin: 5px;
+        }
+
+        .GridPJ2 .Grid-cell {
+            flex: 1;
+            margin-left: 5px;
+            background-color: gray;
+        }
+
+        .GridPJ2 .Grid-cell.u-1of4 {
+            flex: 0 0 25%;
+        }
+
+        .GridPJ2.Grid-cell.u-1of3 {
+            flex: 0 0 33.3333%;
+        }
+
+        /* 圣杯布局 */
+        .HolyGrail {
+            display: flex;
+            min-height: 60vh;
+            flex-direction: column;
+        }
+
+        header,
+        footer {
+            flex: 0 0 3em;
+            min-width: 50rem;
+        }
+
+        .HolyGrail-body {
+            display: flex;
+            flex: 1;
+            min-width: 50rem;
+        }
+
+        .HolyGrail-content {
+            flex: 1;
+        }
+
+        .HolyGrail-nav,
+        .HolyGrail-ads {
+            /* 两个边栏的宽度设为12em */
+            flex: 0 0 12em;
+        }
+
+        .HolyGrail-nav {
+            /* 导航放到最左边 */
+            order: -1;
+        }
+
+        /* 组合文本框 */
+        .InputAddOn {
+            display: flex;
+        }
+
+        .InputAddOn-field {
+            flex: 1;
+        }
+
+        /* 悬挂式布局 */
+        .Media {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .Media-figure {
+            margin-right: 0.5em;
+            margin-top: 1em;
+        }
+
+        .Media-body {
+            flex: 1;
+        }
+        /* 流式布局*/
+        .parent {
+            width: 200px;
+            height: 150px;
+            background-color: black;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+        }
+
+        .child {
+            box-sizing: border-box;
+            background-color: white;
+            flex: 0 0 25%;
+            height: 50px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="GridPJ">
+        <b>平均分配</b>
+        <div class="Grid">
+            <div class="Grid-cell">1/2</div>
+            <div class="Grid-cell">1/2</div>
+        </div>
+        <div class="Grid">
+            <div class="Grid-cell">1/3</div>
+            <div class="Grid-cell">1/3</div>
+            <div class="Grid-cell">1/3</div>
+        </div>
+    </div>
+    <div class="GridPJ2">
+        <b>一部分固定宽度 其余自动平均分配</b>
+        <div class="Grid">
+            <div class="Grid-cell">auto</div>
+            <div class="Grid-cell u-1of4">
+                1/4
+            </div>
+        </div>
+        <div class="Grid">
+            <div class="Grid-cell u-1of4">1/4</div>
+            <div class="Grid-cell">auto</div>
+            <div class="Grid-cell">auto</div>
+            <div class="Grid-cell u-1of3">
+                1/3
+            </div>
+        </div>
+    </div>
+    <!-- 圣杯布局 -->
+    <b>圣杯布局</b>
+    <div class="HolyGrail">
+        <header style="background-color: aqua;">header</header>
+        <div class="HolyGrail-body">
+            <main class="HolyGrail-content" style="background-color:#ff0000;">content...</main>
+            <nav class="HolyGrail-nav" style="background-color:#00ff00;">nav...</nav>
+            <aside class="HolyGrail-ads" style="background-color:#0000ff;">ads</aside>
+        </div>
+        <footer style="background-color:#6b6b70;">footer</footer>
+    </div>
+    <!-- 圣杯布局 -->
+    <b>组合文本框</b>
+    <div class="InputAddOn">
+        <span class="InputAddOn-item">from...</span>
+        <input class="InputAddOn-field">
+        <button class="InputAddOn-item">To...</button>
+    </div>
+    <!-- 悬挂式布局 -->
+    <b>悬挂式布局</b>
+    <div class="Media">
+        <img class="Media-figure" src="../img/1673320088612.jpg" alt="">
+        <p class="Media-body" style="max-width: 100px;">是德国的顶顶顶顶水水水水水水水水水水水水水水水水水水水</p>
+
+        <img class="Media-figure" src="../img/1673320088612.jpg" alt="" style="margin-left: 3em;">
+        <p class="Media-body" style="max-width: 100px;">水水水水水</p>
+    </div>
+
+    <!--流式布局-->
+    <b>流式布局</b>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
