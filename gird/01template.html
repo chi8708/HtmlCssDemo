@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    b {
+        margin-top: 20px;
+    }
+
+    .item {
+        margin: 2px;
+    }
+
+    .item:nth-of-type(n) {
+        background-color: aqua;
+
+    }
+
+    .item:nth-of-type(2n) {
+        background-color: #ff0000;
+
+    }
+
+    /* template */
+    .template {
+        display: grid;
+        width: 20vh;
+        height: 20vh;
+        /* grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 33.33% 33.33% 33.33%; */
+        grid-template-columns: repeat(3, 33.33%);
+        /*上图等效*/
+        grid-template-rows: repeat(3, 33.33%);
+    }
+
+
+    /* auto-fill */
+    .auto-fill {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+    }
+
+    /*fr*/
+    .fr {
+        display: grid;
+        grid-template-columns: 150px 1fr 2fr;
+    }
+
+    /*minmax*/
+    .minmax {
+        display: grid;
+        grid-template-columns: 1fr 2fr minmax(300px,3fr);
+    }
+    /* auto */
+    .auto{
+        display:grid;
+        grid-template-columns: 100px auto 300px 100px;
+    }
+    
+    /*6等分栅格*/
+    .PJ6{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+</style>
+
+<body>
+    <div>
+        <b> grid-template-columns 、 grid-template-rows使用 3行3列大小一致。 多出来的子元素，高度不会变</b>
+        <div class="template">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+
+
+    <!--不加margin 会和上面10-11重叠 10、11超出了容器行-->
+    <div style="width: 30vw;margin-top: 30px;">
+        <b>auto-fill 单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充。</b>
+        <div class="auto-fill">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+    <div>
+        <b>fr为了方便表示比例关系，网格布局提供了fr关键字（fraction 的缩写，意为"片段"）。如果两列的宽度分别为1fr和2fr，就表示后者是前者的两倍。</b>
+        <div class="fr">
+            <div class="item">1 150px</div>
+            <div class="item">2 1fr</div>
+            <div class="item">3 2fr</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+
+        <div>
+            <b>minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。</b>
+            <div class="minmax">
+                <div class="item">1 1fr</div>
+                <div class="item">2 2fr</div>
+                <div class="item">3 minmax(300px,3fr)</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+            </div>
+        </div>
+
+        <div>
+            <b>auto关键字表示由浏览器自己决定长度。</b>
+            <div class="auto">
+                <div class="item">1 100px</div>
+                <div class="item">2 auto</div>
+                <div class="item">3 300px</div>
+                <div class="item">4 100px</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+            </div>
+        </div>
+
+        <div>
+            <b>6等分。</b>
+            <div class="PJ6">
+                <div class="item">1</div>
+                <div class="item">2 </div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+            </div>
+        </div>
+</body>
+
+</html>

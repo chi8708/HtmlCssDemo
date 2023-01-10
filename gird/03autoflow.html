@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b {
+            margin-top: 20px;
+        }
+
+        .item {
+            margin: 2px;
+        }
+
+        .item:nth-of-type(n) {
+            background-color: aqua;
+
+        }
+
+        .item:nth-of-type(2n) {
+            background-color: #ff0000;
+
+        }
+        /* grid-auto-flow */
+        .auto-flow{
+            display: grid;
+            width: 30vh;
+            height: 30vh;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 10px 20px;
+            grid-auto-flow: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <b>这个顺序由grid-auto-flow属性决定，默认值是row，即"先行后列"。也可以将它设成column，变成"先列后行"。</b>
+        <div class="auto-flow">
+            <div class="item">1</div>
+            <div class="item" >2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+</body>
+
+</html>

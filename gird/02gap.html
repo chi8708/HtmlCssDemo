@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b {
+            margin-top: 20px;
+        }
+
+        .item {
+            margin: 2px;
+        }
+
+        .item:nth-of-type(n) {
+            background-color: aqua;
+
+        }
+
+        .item:nth-of-type(2n) {
+            background-color: #ff0000;
+
+        }
+        /* grid-row-gap grid-column-gap */
+        .gap{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* grid-row-gap:10px;
+            grid-column-gap: 20px;  等效*/ 
+            grid-gap: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <b>grid-row-gap属性设置行与行的间隔（行间距），grid-column-gap属性设置列与列的间隔（列间距）。 </b><br />
+        <b>grid-gap属性是grid-column-gap和grid-row-gap的合并简写形式，语法如下。 grid-gap: grid-row-gap grid-column-gap;</b>
+        <div class="gap">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+</body>
+
+</html>
