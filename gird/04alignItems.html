@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b {
+            margin-top: 20px;
+        }
+
+        .item {
+            margin: 2px;
+            width: 30px;
+            height: 30px;
+
+        }
+
+        .item:nth-of-type(n) {
+            background-color: aqua;
+
+        }
+
+        .item:nth-of-type(2n) {
+            background-color: #ff0000;
+
+        }
+
+        /* justify-items */
+        .justify-items {
+            display: grid;
+            width: 30vh;
+            height: 30vh;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px 20px;
+            /* justify-items: center;
+            align-items: flex-end; */
+            place-items: flex-end center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <b>justify-items属性设置单元格内容的水平位置（左中右），align-items属性设置单元格内容的垂直位置（上中下）。<br />
+            place-items属性是align-items属性和justify-items属性的合并简写形式。
+            place-items: [align-items] [justify-items];
+        </b>
+        <div class="justify-items">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+</body>
+
+</html>

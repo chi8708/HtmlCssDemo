@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b {
+            margin-top: 20px;
+        }
+
+        .item {
+            margin: 2px;
+
+        }
+
+        .item:nth-of-type(n) {
+            background-color: aqua;
+
+        }
+
+        .item:nth-of-type(2n) {
+            background-color: #ff0000;
+
+        }
+
+        /* justify-items */
+        .justify-content {
+            display: grid;
+            width: 30vh;
+            height: 30vh;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+            /*这里的auto 是指每列的宽度， 列宽不能设置成百分比的值或fr值 （例: 33.33% | 1fr），否则 justify-content 属性没有效果*/
+            grid-gap: 10px 20px;
+            /* align-content: end;
+            justify-content: center; */
+            /*设置属性后宽高不会自适应平均分配 */
+            place-content: end center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100%;height:100%;">
+        <b>justify-content 属性，
+            align-content 属性，
+            place-content 属性
+            justify-content属性是整个内容区域在容器里面的水平位置（左中右），align-content属性是整个内容区域的垂直位置（上中下）。
+            <br />
+            justify-content 属性 针对的是每列的网格进行布局， 而非网格内的元素，
+            grid-template-columns: repeat(3, auto) 属性中第二个参数 这里的auto 是指每列的宽度，
+            如果设置成了 33.33% 或者 1fr 这种为每个网格平均分配宽度的情况，justify-content 属性自然是没有意义的，就会出现看上去无效的情况。
+            <br />
+            place-content: align-content justify-content
+        </b>
+        <div class="justify-content">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+</body>
+
+</html>
