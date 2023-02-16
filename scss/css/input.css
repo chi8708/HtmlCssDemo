@@ -55,6 +55,7 @@ a {
 
 #Content_ZH > div {
   border: 1px solid #ff0000;
+  font-weight: bold;
 }
 #Content_ZH #p1 ~ p {
   color: #00ff00;
