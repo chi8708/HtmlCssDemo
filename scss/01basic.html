@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- https://www.sass.hk/guide/ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/input.css"> -->
+    <style>
+        @import url(css/input.css);
+    </style>
+</head>
+
+<body>
+    <h1>变量使用 标识符$</h1>
+    <div>
+        <div class="selected">变量引用 </div>
+        <a href="">中划线和下划线一样效果</a>
+    </div>
+    <h1>css嵌套 和css一样</h1>
+    <div id="content">
+        <article>
+            <h1>文章标题</h1>
+            <p>
+                测试内容
+                <a href="">父选择器的标识符&</a>
+            </p>
+        </article>
+        <aside>
+            侧边栏
+        </aside>
+    </div>
+    <h1>群组选择器 标识符,</h1>
+    <div id="content_QZ">
+        <nav class="nav1">导航1</nav>
+        <nav class="nav2">导航2</nav>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        
+    </div>
+    <h1>子组合选择器和同层组合选择器：>、+和~;</h1>
+     <div id="Content_ZH">
+        <div>
+            <p>p1 直接子></p> 
+            <div><p>二级 p1.1</p></div>
+        </div>
+        <div>
+            <p id="p1">同层</p>
+            <p>同层相邻组合选择器+</p>
+            <p>同层所有</p>
+        </div>
+     </div>
+     <h1>嵌套属性;</h1>
+     <div id="Content_SXQT">
+        <div>
+            把属性名从中划线-的地方断开，在根属性后边添加一个冒号:，紧跟一个{ }块
+        </div>
+     </div>
+     <h1>嵌套导入</h1>
+     <div id="Content_QTDR">
+        <div class="blue-them">
+            sass允许@import命令写在css规则内
+        </div>
+     </div>
+     <h1>混合器@mixin,类似方法</h1>
+     <div id="Content_HHQ">
+        <div>
+            混合器使用@mixin标识符定义, @include调用会把混合器中的所有样式提取出来放在@include被调用的地方
+            <p>混合器中不仅可以包含属性，也可以包含css规则，包含选择器和选择器中的属性，如下代码</p>
+            <a>混合器传参</a>
+            <p id="df">参数默认值使用$name: default-value的声明形式</p>
+        </div>
+     </div>
+
+     <h1>器继承来精简CSS,通过@extend语法实现</h1>
+     <div id="Content_JCQ">
+        <div class="error"> @extend .error;</div>
+        <a>.error a应用到#Content_JCQ a</a>
+        <h1 class="error">h1.error应用到hl.#Content_JCQ</h1>
+     </div>
+     
+     
+</body>
+
+</html>

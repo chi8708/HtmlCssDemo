@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+  width: 500px;
+  background-color: #f2f2f2;
+  color: #000000;
+  font-size: 16px;
+}
+
+.selected {
+  border: 1px solid #F90;
+}
+
+a {
+  color: blue;
+}
+
+#content {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#content article h1 {
+  color: #333;
+}
+#content article p {
+  margin-bottom: 1.4em;
+}
+#content aside {
+  background-color: #EEE;
+}
+#content a {
+  color: blue;
+}
+#content a:hover {
+  color: #ff0000;
+}
+
+#content_QZ {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#content_QZ h1,
+#content_QZ h2,
+#content_QZ h3 {
+  color: #ff0000;
+}
+#content_QZ .nav1,
+#content_QZ .nav2 {
+  color: blue;
+  margin-left: 5px;
+}
+
+#Content_ZH > div {
+  border: 1px solid #ff0000;
+}
+#Content_ZH #p1 ~ p {
+  color: #00ff00;
+}
+#Content_ZH #p1 + p {
+  color: #0000ff;
+}
+
+#Content_SXQT {
+  border-top: 1px solid #ff0000;
+}
+
+/*嵌套导入 因为sass的语法完全兼容css，所以你可以把原始的css文件改名为.scss后缀，即可直接导入了*/
+/* 这种注释内容会出现在生成的css文件中 */
+#Content_QTDR .blue-them {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+/*混合器*/
+#Content_HHQ {
+  border: 1px solid red;
+  font-size: 16px;
+}
+#Content_HHQ p {
+  font-size: 12px;
+}
+#Content_HHQ a {
+  color: red;
+  cursor: pointer;
+  /*等效*/
+}
+#Content_HHQ a:hover {
+  color: green;
+}
+#Content_HHQ a:visited {
+  color: blue;
+}
+#Content_HHQ #df {
+  color: #222;
+}
+#Content_HHQ #df:hover {
+  color: red;
+}
+#Content_HHQ #df:visited {
+  color: red;
+}
+
+.error, #Content_JCQ {
+  border: 1px solid red;
+  background-color: #fdd;
+}
+
+.error a, #Content_JCQ a {
+  color: red;
+  font-weight: 100;
+}
+
+h1.error, h1#Content_JCQ {
+  font-size: 1.2rem;
+}
