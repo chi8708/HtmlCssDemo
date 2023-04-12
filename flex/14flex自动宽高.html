@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+        .flex {
+            display: flex;
+            height: 100px;
+            border: 1px solid red;
+            /* align-items:center; */
+           
+        }
+
+        .flex > div{
+            margin: 5px;
+            background-color: red;
+            flex: 1; /*高拉升和父级通过，宽自动分配 。 若加了flex align-items; 或者item加了self-items: baseline高度不会拉升 */ 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-basis">
+        <p style="font-weight: bold;">
+        </p>
+        <div class="flex">
+            <div class="content flex-basis1">flex-basis1</div>
+            <div class="content flex-basis2">flex-basis2</div>
+            <div class="content flex-basis3">flex-basis3</div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
