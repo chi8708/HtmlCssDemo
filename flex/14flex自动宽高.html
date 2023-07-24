@@ -22,6 +22,24 @@
             background-color: red;
             flex: 1; /*高拉升和父级通过，宽自动分配 。 若加了flex align-items; 或者item加了self-items: baseline高度不会拉升 */ 
         }
+
+        .div-img img{
+            width: 200px;
+            height: 400px;
+        }
+
+        .div-img img:nth-of-type(1){
+            object-fit: contain; /* 默认，不保证保持原有的比例，内容拉伸填充整个内容容器。 */
+
+        }
+        .div-img img:nth-of-type(2){
+            object-fit: fill; /* 保持原有尺寸比例。内容被缩放。 */
+            
+        }
+        .div-img img:nth-of-type(3){
+            object-fit: cover;/* 保持原有尺寸比例。但部分内容可能被剪切。 */
+        }
+
     </style>
 
 </head>
@@ -36,6 +54,14 @@
             <div class="content flex-basis3">flex-basis3</div>
         </div>
         
+        <div class="div-img">
+            <img src="../img/fit.jpg">
+            <br />
+            <img src="../img/fit.jpg">
+            <br />
+            <img src="../img/fit.jpg">
+            <br />
+        </div>
     </div>
 </body>
 
