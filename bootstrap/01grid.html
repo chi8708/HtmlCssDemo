@@ -29,7 +29,7 @@
 
 <body>
     <div class="container">
-        <h3>Equal-width 平均分配、width100%</h3>
+        <h3> 平均分配 Equal-width 、宽度100% width100%</h3>
         <div>
             <div class="row">
                 <div class="col">
@@ -67,7 +67,7 @@
         </div>
 
 
-        <h3> col-md-auto   Variable width content 宽度随内容变</h3>
+        <h3>宽度随内容变 col-md-auto  </h3>
         <div>
             <div class="row justify-content-md-center">
                 <div class="col col-lg-2">
@@ -94,7 +94,7 @@
 
         </div>
 
-        <h3>Mix and match 混合匹配 ，不同宽度不同列数</h3>
+        <h3> 混合匹配 ，不同宽度不同列数col-6 col-md-4</h3>
         <div>
             <!-- Stack the columns on mobile by making one full-width and the other half-width -->
             <div class="row">
@@ -115,24 +115,101 @@
             </div>
         </div>
 
-        <h3> row-cols-*每行显示的列数</h3>
+        <h3>每行显示的列数 row-cols-*</h3>
         <div class="container">
             <div class="row row-cols-3">
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+        <h3> 垂直对齐 align-items-start 、center、end</h3>
+        <div class="container">
+            <div class="row align-items-center" style="height: 100px; background-color: #00ff00;">
+                <div class="col align-self-start">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+        <h3> 水平对齐 justify-content-start、 center、 end、 around、 between</h3>
+        <div class="container">
+            <div class="row justify-content-center" style="background-color: #00ff00;">
+                <div class="col-2">Column</div>
+                <div class="col-2">Column</div>
+            </div>
+            <div class="row justify-content-around" style="background-color: #00ff00;">
+                <div class="col-2">Column</div>
+                <div class="col-2">Column</div>
+            </div>
+            <div class="row justify-content-between" style="background-color: #00ff00;">
+                <div class="col-2">Column</div>
+                <div class="col-2">Column</div>
+            </div>
+        </div>
+
+
+        <h3> 偏移 offset</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+            </div>
+        </div>
+
+        <h3>Margin  设置ml-[md?]-auto ml/mr  </h3>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+              <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+            </div>
+            <div class="row">
+              <div class="col-3 mr-auto">.col-auto .mr-auto</div>
+              <div class="col-auto">.col-auto</div>
             </div>
           </div>
 
+          <h3>嵌套</h3>
           <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
+            <div class="row">
+              <div class="col-sm-9">
+                Level 1: .col-sm-9
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    Level 2: .col-8 .col-sm-6
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    Level 2: .col-4 .col-sm-6
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+        <hr style="height: 3px; border-top: 2px double ; border-bottom: 2px double ; border-color: bisque;" />
+
+    </div>
 
     </div>
 </body>
